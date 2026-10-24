@@ -1,0 +1,16 @@
+/* Small additions on top of Tailwind. */
+[x-cloak] { display: none !important; }
+table.data { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+table.data th { text-align: left; font-weight: 500; color: #64748b; background: #f8fafc; padding: .65rem 1rem; white-space: nowrap; }
+table.data td { padding: .7rem 1rem; border-top: 1px solid #e2e8f0; vertical-align: middle; }
+table.data tbody tr:hover { background: #f8fafc; }
+table.data td.num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, .5); z-index: 50; display: none; align-items: center; justify-content: center; padding: 1rem; }
+.modal-backdrop.open { display: flex; }
+
+@media print {
+  .no-print, aside, header { display: none !important; }
+  body { background: #fff !important; }
+  main { padding: 0 !important; max-width: none !important; }
+  .print-card { border: 0 !important; box-shadow: none !important; }
+}
